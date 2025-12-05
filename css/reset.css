@@ -1,0 +1,79 @@
+/* reset.css — reset moderno inspirado em Andy Bell (adaptado)
+   Uso: importe antes dos seus estilos principais.
+*/
+
+/* Box sizing e pseudo-elementos */
+:where(*, *::before, *::after) {
+  box-sizing: border-box;
+}
+
+/* Base do documento */
+html, body {
+  height: 100%;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.15;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  color: inherit;
+  background: transparent;
+}
+
+/* Imagens, vídeos e mídias responsivas */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Formulários e controles */
+button, input, optgroup, select, textarea {
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Lists and tables */
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Accessibility: foco visível */
+:where(:focus) {
+  outline: 2px solid Highlight;
+  outline-offset: 2px;
+}
+
+/* Preferências de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  :where(*, *::before, *::after) {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
