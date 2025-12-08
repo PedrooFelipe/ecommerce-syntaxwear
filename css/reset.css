@@ -19,7 +19,6 @@ html {
 
 body {
   margin: 0;
-  background: transparent;
 }
 
 /* Imagens, vídeos e mídias responsivas */
@@ -44,7 +43,6 @@ button {
 
 /* Links */
 a {
-  color: inherit;
   text-decoration: none;
 }
 
